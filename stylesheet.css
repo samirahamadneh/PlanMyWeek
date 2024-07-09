@@ -1,0 +1,23 @@
+h1 {
+    color: #00215E;
+    font-size: 35px;
+}
+
+h3 {
+    color: #00215E;
+    font-size: 20px;
+}
+
+p {
+    color:#00215E;
+    font-size: 17px;
+}
+
+* {
+   text-align: center;
+   font-family: "Gill Sans", sans-serif;
+}
+
+img {
+    height: 300px;
+}
