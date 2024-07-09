@@ -17,16 +17,58 @@ p {
    font-family: "Gill Sans", sans-serif;
 }
 
-.image-content {
+.homepage-description {
+    height: auto;
+    width: 700px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+}
+
+.zen-woman-img {
+    height: auto;
+    width: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 370px;
+    margin-bottom: 50px;
+}
+
+.zen-woman-wrapped {
+    max-width: 500%;
+    height: auto; 
+}
+
+.brain-heart-img {
+    height: auto;
+    width: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 370px;
+    margin-bottom: 20px;
+}
+
+.brain-heart-wrapped {
+    max-width: 500%;
+    height: auto;
+}
+
+.footer-image {
     width: 130px; 
     height: auto;  
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 350px;
+    margin-top: 50px;
 }
 
 .ant-wrapped {
     max-width: 100%;
     height: auto; 
 }
+
