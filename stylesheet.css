@@ -1,46 +1,77 @@
+body {
+    background-color: rgb(248, 245, 240);
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color:#00215E;
+    font-size: 18px;
+}
+
 h1 {
     color: #00215E;
-    font-size: 35px;
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
 h3 {
     color: #00215E;
     font-size: 20px;
-}
-
-p {
-    color:#00215E;
-    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 * {
    text-align: center;
-   font-family: "Gill Sans", sans-serif;
+}
+
+.header-oval {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background: #2C4E80;
+    border-radius: 20%;
+    color: #2C4E80;
+    top: 20;
+    left: 10;
+    z-index: -3;
 }
 
 .homepage-description {
     height: auto;
-    width: 700px; 
+    width: 500px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 80px;
+    margin-left: 35%;
 }
 
 .zen-woman-img {
     height: auto;
-    width: 100px; 
+    width: 400px; 
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    margin-left: 370px;
-    margin-bottom: 50px;
+    margin-left: 40%;
+    margin-bottom: 50px; 
+}
+    
+.zen-woman-wrapped {
+    max-width: 600%;
+    height: auto; 
 }
 
-.zen-woman-wrapped {
-    max-width: 500%;
-    height: auto; 
+.zen-woman-background {
+    background-color: #c7edff;
 }
 
 .brain-heart-img {
@@ -49,13 +80,17 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 370px;
+    margin-left: 48%;
     margin-bottom: 20px;
 }
 
 .brain-heart-wrapped {
-    max-width: 500%;
+    max-width: 600%;
     height: auto;
+}
+
+.brain-heart-background {
+    background-color: white;
 }
 
 .about-us-img {
@@ -92,7 +127,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 350px;
+    margin-left: 16rem;
+    margin-right: 16rem;
     margin-top: 50px;
 }
 
