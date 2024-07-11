@@ -1,19 +1,22 @@
 body {
-    background-color: rgb(248, 245, 240);
+    background-color: #fafae3;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 p {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     color:#00215E;
-    font-size: 18px;
+    font-size: 25px;
 }
 
 h1 {
     color: #00215E;
-    font-size: 40px;
+    font-size: 60px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -22,7 +25,7 @@ h1 {
 
 h3 {
     color: #00215E;
-    font-size: 20px;
+    font-size: 30px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -33,36 +36,22 @@ h3 {
    text-align: center;
 }
 
-.header-oval {
-    position: absolute;
-    width: 300px;
-    height: 100px;
-    background: #2C4E80;
-    border-radius: 20%;
-    color: #2C4E80;
-    top: 20;
-    left: 10;
-    z-index: -3;
-}
-
 .homepage-description {
     height: auto;
     width: 500px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 35%;
+    height: 100%;
+    width: 100%;
 }
 
-.zen-woman-img {
-    height: auto;
-    width: 400px; 
+.zen-woman-img { 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    margin-left: 40%;
-    margin-bottom: 50px; 
+    height: 100%;
+    width: 100%; 
 }
     
 .zen-woman-wrapped {
@@ -70,27 +59,17 @@ h3 {
     height: auto; 
 }
 
-.zen-woman-background {
-    background-color: #c7edff;
-}
-
-.brain-heart-img {
-    height: auto;
-    width: 100px; 
+.brain-heart-img { 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 48%;
-    margin-bottom: 20px;
+    height: 100%;
+    width: 100%;
 }
 
 .brain-heart-wrapped {
-    max-width: 600%;
-    height: auto;
-}
-
-.brain-heart-background {
-    background-color: white;
+    max-width: 100%;
+    height: 390px;
 }
 
 .about-us-img {
@@ -121,18 +100,19 @@ h3 {
     margin-top: 50px;
 }
 
-.footer-image {
-    width: 130px; 
-    height: auto;  
+.footer-links {
+    font-size: 20px;
+}
+
+.footer-image { 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 16rem;
-    margin-right: 16rem;
-    margin-top: 50px;
+    height: 100%;
+    width: 100%;
 }
 
 .ant-wrapped {
-    max-width: 100%;
+    max-width: 10%;
     height: auto; 
 }
