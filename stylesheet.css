@@ -5,6 +5,55 @@ body {
     font-style: normal;
 }
 
+
+.logo {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 100%;
+    width: 100%;
+}
+
+.logo-wrapped {
+    padding: 5px 5px;
+    max-width: 40%;
+    height: auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #54b1fd;
+    color:#fdfdfd;
+}
+
+.menu-items {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-list li {
+    margin: 0 5px;
+}
+
+.menu-list a {
+    color: #fafae3;
+    text-decoration: none;
+    font-size: 18px;
+}
+
 p {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -16,10 +65,19 @@ p {
 
 h1 {
     color: #00215E;
-    font-size: 60px;
+    font-size: 35px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
+    font-style: normal;
+}
+
+h2 {
+    color: #00215E;
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -73,38 +131,6 @@ h3 {
 }
 
 .about-us-img {
-    width: 330px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 250px;
-    margin-bottom: 60px;
-    margin-top: 50px;
-}
-
-.cute-brain-wrapped {
-    max-width: 100%;
-    height: auto;
-}
-
-.about-text {
-    font-size: 18px;
-    width: 700px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 73px;
-    margin-bottom: 60px;
-    margin-top: 50px;
-}
-
-.footer-links {
-    font-size: 20px;
-}
-
-.footer-image { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,7 +138,33 @@ h3 {
     width: 100%;
 }
 
+.cute-brain-wrapped {
+    max-width: 100%;
+    height: 500px;
+}
+
+.about-text {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.footer-links {
+    font-size: 18px;
+}
+
+.footer-image { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5%;
+    width: 100%;
+}
+
 .ant-wrapped {
-    max-width: 10%;
-    height: auto; 
+    max-width: 100%;
+    height: 1%; 
 }
