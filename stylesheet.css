@@ -1,5 +1,5 @@
 body {
-    background-color: #fafae3;
+    background-color: #fffff3;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -10,13 +10,13 @@ body {
     display: flex;
     justify-content: left;
     align-items: left;
-    height: 100%;
-    width: 100%;
+    height: 20%;
+    width: 20%;
 }
 
 .logo-wrapped {
-    padding: 5px 5px;
-    max-width: 40%;
+    padding: 5px 3px;
+    max-width: 50%;
     height: auto;
 }
 
@@ -25,11 +25,12 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    padding: 10px 10px;
     font-family: "Montserrat", sans-serif;
-    background-color: #54b1fd;
-    color:#fdfdfd;
+    background-color: #eaead8;
+    color:#00215E;
 }
+
 
 .menu-items {
     flex-grow: 1;
@@ -41,17 +42,21 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
 
 .menu-list li {
-    margin: 0 5px;
+    margin: 0 30px;
 }
 
 .menu-list a {
-    color: #fafae3;
+    color: #00215E;
     text-decoration: none;
     font-size: 18px;
+}
+
+.menu-list a:hover {
+    color: #fffff3;
 }
 
 p {
@@ -74,6 +79,7 @@ h1 {
 
 h2 {
     color: #00215E;
+    text-decoration: none;
     font-size: 40px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -83,6 +89,7 @@ h2 {
 
 h3 {
     color: #00215E;
+    text-decoration: none;
     font-size: 30px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
