@@ -102,13 +102,11 @@ h3 {
 }
 
 .homepage-description {
-    height: auto;
-    width: 500px; 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 100%;
+    width: 100%
 }
 
 .zen-woman-img { 
