@@ -91,5 +91,5 @@ class login {
 }
 
 module.exports  = {
-    users
+    login
 }
