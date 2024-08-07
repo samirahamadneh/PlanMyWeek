@@ -17,14 +17,14 @@ app.use(session({
   cookie: { secure: false }
 }));
 
-//PUG TEMPLATING ENGINE
+
 app.set('view engine', 'html');
 app.set('views', './app/views');
 
 const db = require('./services/db');
 
 // Models- user
-const { login } = require("./models/login");
+const { login } = require("./login");
 
 // Parse request body
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -45,3 +45,6 @@ app.get("/views/about-us", (req, res) => {
 app.get("/contact-us", (req, res) => {
     res.render('contact-us');
 });
+
+
+
