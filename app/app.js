@@ -1,6 +1,15 @@
 // Import express.js
 const express = require("express");
 
+var app = (function () {
+  var websiteName = "PlanMyWeek";
+  return {
+    getWebsiteName: function() {
+      return websiteName;
+    }
+  }
+}) ();
+
 // Create express app
 var app = express();
 
