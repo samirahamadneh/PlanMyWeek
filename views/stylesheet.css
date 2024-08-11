@@ -144,24 +144,27 @@ h3 {
   display: none;
   opacity: .5;
   background-color: #b8d1ff;
-  padding: 0 20px;
+  padding: 20px;
   color: #00215E;
   width: 26px;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 48px;
   position: fixed;
-  right: 10px;
-  bottom: 10px;
-  border: 1px solid white;
-  border-radius: 30px;
+  cursor: pointer;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99;
+  border: none;
+  border-radius: 50%;
+  outline: none;
 }
 
 #scrollToTop:hover {
-  opacity: 1;
+   opacity: 1;
   -webkit-transition: all 250ms linear;
   -ms-transition: all 250ms linear;
   transition: all 250ms linear;
-  cursor: pointer;
+  background-color: #fee6e3;
 }
 
 .button-home {
