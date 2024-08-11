@@ -171,15 +171,15 @@ h3 {
     align-items: center;
     background-color: #fee6e3;
     font-family: "Montserrat", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal ;
     border: 2px solid #111;
     border-radius: 8px;
     box-sizing: border-box;
     color: #111;
     cursor: pointer;
-    font-size: 50px;
-    height: 80px;
+    font-size: 40px;
+    height: 75px;
     justify-content: center;
     line-height: 30px;
     max-width: 100%;
@@ -197,7 +197,7 @@ h3 {
     border-radius: 8px;
     content: "";
     display: block;
-    height: 80px;
+    height: 75px;
     left: 0;
     width: 100%;
     position: absolute;
@@ -326,11 +326,13 @@ h3 {
 }
 
 form {
-    box-sizing: border-box;
-    padding: 2rem;
-    border-radius: 1rem;
+    box-sizing: border-box; 
+    padding: 50px;
+    border-radius: 2rem;
     background-color: #f9efef (0, 0%, 100%);
-    border: 4px solid hsl(0, 73%, 87%);
+    border: 0px solid hsl(0, 73%, 87%);
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    font-size: 20px;
+    color: #00215E;
+    gap: 1rem;
   }
