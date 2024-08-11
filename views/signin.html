@@ -38,17 +38,17 @@
         <form action="/views/create.html" method="POST">
             <div>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" required>
             </div>
             <p></p>
             <div>
                 <label for="mail">E-mail:</label>
-                <input type="email" id="mail" name="email">
+                <input type="email" id="mail" name="email" required>
             </div>
             <p></p>
             <div>
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password"></label>
+                <input type="password" id="password" name="password" required></label>
             </div>
             <p></p>
             <a href="./create.html"><button class="button-56" role="button">Sign in! </button></a>
@@ -59,18 +59,28 @@
         <p> Sign up today! </p>
         <form action="/views/create.html" method="POST">
             <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
+                <label for="Fname">First Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <p></p>
+            <div>
+                <label for="Lname">Last Name:</label>
+                <input type="text" id="name" name="name" required>
             </div>
             <p></p>
             <div>
                 <label for="mail">E-mail:</label>
-                <input type="email" id="mail" name="email">
+                <input type="email" id="mail" name="email" required>
             </div>
             <p></p>
             <div>
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password"></label>
+                <input type="password" id="password" name="password" required></label>
+            </div>
+            <p></p>
+            <div>
+                <label for="password">Confirm Password:</label>
+                <input type="password" id="password" name="password" required></label>
             </div>
             <p></p>
             <a href="./create.html"><button class="button-56" role="button">Register Today! </button></a>
