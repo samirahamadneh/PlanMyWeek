@@ -26,7 +26,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px;
+    padding: 20px 10px;
     font-family: "Montserrat", sans-serif;
     background-color: #fee6e3;
     color:#00215E;
@@ -140,7 +140,7 @@ h3 {
     height: 390px;
 }
 
-#scrollToTop {
+.scrollToTop {
   display: none;
   opacity: .5;
   background-color: #b8d1ff;
@@ -159,7 +159,7 @@ h3 {
   outline: none;
 }
 
-#scrollToTop:hover {
+.scrollToTop:hover {
    opacity: 1;
   -webkit-transition: all 250ms linear;
   -ms-transition: all 250ms linear;
@@ -327,12 +327,11 @@ h3 {
 
 form {
     box-sizing: border-box; 
-    padding: 50px;
-    border-radius: 2rem;
+    padding: 4rem;
+    border-radius: 3rem;
     background-color: #f9efef (0, 0%, 100%);
     border: 0px solid hsl(0, 73%, 87%);
     grid-template-columns: 1fr 1fr;
-    font-size: 20px;
+    font-size: 25px;
     color: #00215E;
-    gap: 1rem;
   }

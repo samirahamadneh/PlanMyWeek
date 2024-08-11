@@ -20,7 +20,6 @@
             <nav class="menu-items">
                 <ul class="menu-list">
                     <li><a href="index.html"> Home </a></li>
-                    <li><a href="create.html"> Create </a></li>
                     <li><a href="about-us.html"> About Us </a></li>
                     <li><a href="signin.html"> Sign in/Sign up</a></li>
                 </ul>
@@ -30,14 +29,56 @@
         <h1>
             Create your own schedule - hassle free!
         </h1>
-<!--insert image here -->
+        <div class="about-us-img">
+            <img src="./images/cute-smiling-brain.png" class="cute-brain-wrapped">
+        </div>
         <p>
             For those busybodies who want to manually make their own schedule - you go boss!
         </p>
 <!--insert pre-chosen buttons that are draggable--> 
         <p></p>
-        <p>Want to use a preset schedule?</p>
-        <a href='#'>placeholder preset schedule</a>
+
+        <form>
+            <div>
+              <label for="name">Name</label>
+              <input id="name" type="text" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" type="email" />
+            </div>
+            <div>
+              <label for="comp">Favorite CSS Compiler</label>
+              <select id="comp">
+                <option value="sass">Sass</option>
+                <option value="less">Less</option>
+                <option value="stylus">Stylus</option>
+                <option value="postcss">PostCSS</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <fieldset>
+                <legend>Are you familiar with CSS Grid?</legend>
+                <input type="radio" name="grid" id="yes" value="yes" />
+                <label for="yes">Yes</label>
+                <input type="radio" name="grid" id="no" value="no" />
+                <label for="no">No</label>
+              </fieldset>
+            </div>
+            <div class="full-width">
+              <label for="message">Message</label>
+              <textarea id="message"></textarea>
+            </div>
+            <div class="full-width">
+              <input type="checkbox" id="newsletter" />
+              <label for="newsletter">Receive our newsletter?</label>
+            </div>
+            <div class="full-width">
+              <button type="submit">Send Response</button>
+              <button type="reset">Clear Form</button>
+            </div>
+          </form>
 
         <footer>
             <div class="footer-image">

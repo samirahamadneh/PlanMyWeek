@@ -5,7 +5,7 @@ const app = require("./app");
 
 // this runs the code
 
-/* function HomeIndex() {
+function HomeIndex() {
     const heightFromTop = 300;
     this.initialiseScrollToTopButton = function () {
         $(window).scroll(function () {
@@ -25,7 +25,7 @@ $(document).ready(function () {
     appp.HomeIndex = new HomeIndex();
     appp.HomeIndex.initialiseScrollToTopButton();
 });
-*/
+
 
 // Get the button
 const scrollToTop = document.getElementById("scrollToTop");

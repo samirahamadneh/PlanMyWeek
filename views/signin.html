@@ -23,43 +23,60 @@
             <nav class="menu-items">
                 <ul class="menu-list">
                     <li><a href="index.html"> Home </a></li>
-                    <li><a href="create.html"> Create </a></li>
                     <li><a href="about-us.html"> About Us </a></li>
                     <li><a href="signin.html"> Sign in/Sign up</a></li>
                 </ul>
             </nav>
         </header>
         
-        <div class="login-header">
-            <h2> Sign In </h2>
-        </div>
-            <h3> Get access to exclusive and personalised features! </h3>
-            <p> Sign in to your account here! 
-            </p>
+        <h2> Sign In </h2>
+        <h3> Get access to exclusive and personalised features! </h3>
+        <p> Sign in to your account here! </p>
 
-        <span> <form action="/submit-signin" method="POST">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name">
-                </div>
-                <p></p>
-                <div>
-                    <label for="mail">E-mail:</label>
-                    <input type="email" id="mail" name="email">
-                </div>
-                <p></p>
-                <div>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password"></label>
-                </div>
-                <p></p>
-                <button class="button-56" role="button">Sign in! </button>
-            </form>
-            <p> Dont have an account? 
-            </p>
-            <button class="button-home"> Register Today! </button>
-        <!-- put these two side by side in a box with line in middle -->
-        </span>
+        <form action="/views/create.html" method="POST">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <p></p>
+            <div>
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" name="email">
+            </div>
+            <p></p>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"></label>
+            </div>
+            <p></p>
+            <a href="./create.html"><button class="button-56" role="button">Sign in! </button></a>
+            <div class="vertical"></div>
+        </form>
+        <hr />
+        <h3> Dont have an account? </h3>
+        <p> Sign up today! </p>
+        <form action="/views/create.html" method="POST">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <p></p>
+            <div>
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" name="email">
+            </div>
+            <p></p>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"></label>
+            </div>
+            <p></p>
+            <a href="./create.html"><button class="button-56" role="button">Register Today! </button></a>
+        </form>
+
+        <!-- 
+        <button class="button-home"> Register Today! </button>
+        put these two side by side in a box with line in middle -->
 
         <footer>
             <div class="footer-image">
