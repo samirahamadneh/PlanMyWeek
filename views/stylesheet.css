@@ -334,4 +334,42 @@ form {
     grid-template-columns: 1fr 1fr;
     font-size: 25px;
     color: #00215E;
-  }
+}
+
+#calendar-box {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.day {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.schedule-item {
+  background-color: #d4edda;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+#goals-box, #tasks-box {
+  margin-top: 20px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#goals-list, #tasks-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.goal-item, .task-item {
+  background-color: #d4edda;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}

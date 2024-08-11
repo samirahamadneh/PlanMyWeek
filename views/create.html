@@ -9,6 +9,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="jquery-3.7.1.min.js"></script>
+        <script src="../app/app.js"></script>
+        <script src="../app/home.js"></script>
+        <script src="../app/services/db.js"></script>
     </head>
 
     <body>
@@ -38,7 +42,7 @@
 <!--insert pre-chosen buttons that are draggable--> 
         <p></p>
 
-        <form>
+        <!-- <form>
             <div>
               <label for="name">Name</label>
               <input id="name" type="text" />
@@ -78,7 +82,86 @@
               <button type="submit">Send Response</button>
               <button type="reset">Clear Form</button>
             </div>
-          </form>
+        </form> -->
+
+        <form id="work-schedule-form" method="POST" action="/views/create.html">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="startTime">Start Time:</label>
+            <input type="time" id="starTTime" name="startTime" required>
+            
+            <label for="endTime">End Time:</label>
+            <input type="time" id="endTime" name="endTime" required>
+            
+            <label for="DayOfWeek">Day of Week:</label>
+            <input type="text" id="DayOfWeek" name="DayOfWeek" required>
+            
+            <button type="submit">Add Work Schedule</button>
+        </form>
+
+        <form id="goal-form" method="POST" action="/views/create.html">
+            <label for="goalName">Goal Name:</label>
+            <input type="text" id="goalName" name="goalName" required>
+            
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+            
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start_date" required>
+            
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" name="end_date" required>
+            
+            <label for="frequency">Frequency:</label>
+            <select id="frequency" name="frequency" required>
+                <option value="daily">Daily</option>
+                <option value="twice"> Twice a week</option>
+                <option value="thrice"> Three times a week</option>
+                <option value="four"> Four times a week</option>
+                <option value="five"> Five times a week</option>
+                <option value="six"> Six times a week</option>
+                <option value="weekly">Weekly</option>
+            </select>
+            
+            <label for="duration">Duration (HH:MM:SS):</label>
+            <input type="time" id="duration" name="duration" required>
+            
+            <button type="submit">Add Goal</button>
+        </form>
+
+        <form id="task-form" method="POST" action="/views/create.html">
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" name="taskName" required>
+            
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required>
+            
+            <label for="deadline">Deadline:</label>
+            <input type="date" id="deadline" name="deadline" required>
+            
+            <button type="submit">Add Task</button>
+        </form>
+
+        <div id="calendar-box">
+            <div class="day" id="day-1">Monday</div>
+            <div class="day" id="day-2">Tuesday</div>
+            <div class="day" id="day-3">Wednesday</div>
+            <div class="day" id="day-4">Thursday</div>
+            <div class="day" id="day-5">Friday</div>
+            <div class="day" id="day-6">Saturday</div>
+            <div class="day" id="day-7">Sunday</div>
+        </div>
+
+        <div id="goals-box">
+            <h3>Goals</h3>
+            <ul id="goals-list"></ul>
+        </div>
+        
+        <div id="tasks-box">
+            <h3>Tasks</h3>
+            <ul id="tasks-list"></ul>
+        </div>
 
         <footer>
             <div class="footer-image">
