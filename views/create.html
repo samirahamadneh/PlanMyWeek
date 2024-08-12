@@ -13,6 +13,7 @@
         <script src="../app/app.js"></script>
         <script src="../app/home.js"></script>
         <script src="../app/services/db.js"></script>
+
     </head>
 
     <body>
@@ -144,16 +145,72 @@
         </form>
 
         <div id="calendar-box">
-            <div class="day" id="day-1">Monday</div>
-            <div class="day" id="day-2">Tuesday</div>
-            <div class="day" id="day-3">Wednesday</div>
-            <div class="day" id="day-4">Thursday</div>
-            <div class="day" id="day-5">Friday</div>
-            <div class="day" id="day-6">Saturday</div>
-            <div class="day" id="day-7">Sunday</div>
+            <div class="day" id="monday">Monday</div>
+            <div class="day" id="tuesday">Tuesday</div>
+            <div class="day" id="wednesday">Wednesday</div>
+            <div class="day" id="thursday">Thursday</div>
+            <div class="day" id="friday">Friday</div>
+            <div class="day" id="saturday">Saturday</div>
+            <div class="day" id="sunday">Sunday</div>
         </div>
 
-        <div id="goals-box">
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const userID = 1; // Replace with dynamic user ID based on login/session
+            fetch(`fetch_schedule.php?userID=${userID}`)
+                .then(response => response.json())
+                .then(data => {
+                    const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+
+                    days.forEach(day => {
+                        const dayElement = document.getElementById(day);
+                        dayElement.innerHTML = `<h4>${day.charAt(0).toUpperCase() + day.slice(1)}</h4>`;
+
+                        // Display schedules
+                        const daySchedules = data.schedules.filter(schedule => {
+                            const scheduleDate = new Date(schedule.date);
+                            return scheduleDate.toLocaleDateString('en-UK', { weekday: 'long' }).toLowerCase() === day;
+                        });
+                        daySchedules.forEach(schedule => {
+                            const scheduleElement = document.createElement('div');
+                            scheduleElement.className = 'ScheduleName';
+                            scheduleElement.innerText = `${schedule.startTime} - ${schedule.endTime}: ${schedule.DayOfWeek}`;
+                            dayElement.appendChild(scheduleElement);
+                        });
+
+                        // Display goals (assuming they are displayed daily if they are active during the week)
+                        const dayGoals = data.goals.filter(goals => {
+                            const startDate = new Date(goals.startDate);
+                            const endDate = new Date(goals.endDate);
+                            const currentDay = new Date(day);
+
+                            return currentDay >= startDate && currentDay <= endDate;
+                        });
+                        dayGoals.forEach(goals => {
+                            const goalElement = document.createElement('div');
+                            goalElement.className = 'goal-item';
+                            goalElement.innerText = `Goal: ${goals.goalName} (${goals.description})`;
+                            dayElement.appendChild(goalElement);
+                        });
+
+                        // Display tasks
+                        const dayTasks = data.tasks.filter(task => {
+                            const taskDate = new Date(task.deadline);
+                            return taskDate.toLocaleDateString('en-UK', { weekday: 'long' }).toLowerCase() === day;
+                        });
+                        dayTasks.forEach(task => {
+                            const taskElement = document.createElement('div');
+                            taskElement.className = 'taskName';
+                            taskElement.innerText = `Task: ${task.taskName} (Description: ${task.description})`;
+                            dayElement.appendChild(taskElement);
+                        });
+                    });
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+        </script>
+
+        <!-- <div id="goals-box">
             <h3>Goals</h3>
             <ul id="goals-list"></ul>
         </div>
@@ -161,7 +218,7 @@
         <div id="tasks-box">
             <h3>Tasks</h3>
             <ul id="tasks-list"></ul>
-        </div>
+        </div> -->
 
         <footer>
             <div class="footer-image">

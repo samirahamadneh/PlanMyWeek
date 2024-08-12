@@ -71,7 +71,7 @@ app.get('/api/workSchedule', (req, res) => {
 
 const calendarBox = document.getElementById('calendar-box');
 
-fetch('/PlanMyWeek/weekSchedule')
+/* fetch('/PlanMyWeek/weekSchedule')
     .then(response => response.json())
     .then(data => {
         const today = new Date();
@@ -223,4 +223,4 @@ app.post('/add-task', (req, res) => {
 // Start the server
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
-});
+}); */
