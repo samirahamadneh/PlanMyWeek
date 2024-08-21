@@ -337,9 +337,42 @@ form {
 }
 
 #calendar-box {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
+  border: 3px solid black;
+  margin: 100px 100px;
+  padding: 0;
+}
+
+#DayOfWeek {
+  border: .5px solid black;
+  padding: 0;
+}
+
+#blank, #Monday, #Tuesday, #Wednesday, #Thursday, #Friday, #Saturday, #Sunday {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #00215E;
+  width: 7em;
+  height: 50px;
+  border-right: 1px solid black;
+  vertical-align: middle;
+}
+
+.boxes {
+  border: .5px solid black;
+  padding: 0;
+  text-align: center;
+}
+
+.am6, .am6W, .am7, .am7W, .am8, .am8W {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #00215E;
+  width: 7em;
+  height: 30px;
+  border-right: 1px solid black;
+  vertical-align: middle;
 }
 
 .day {

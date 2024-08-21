@@ -40,56 +40,21 @@
         <p>
             For those busybodies who want to manually make their own schedule - you go boss!
         </p>
-<!--insert pre-chosen buttons that are draggable--> 
+
         <p></p>
 
-        <!-- <form>
-            <div>
-              <label for="name">Name</label>
-              <input id="name" type="text" />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" type="email" />
-            </div>
-            <div>
-              <label for="comp">Favorite CSS Compiler</label>
-              <select id="comp">
-                <option value="sass">Sass</option>
-                <option value="less">Less</option>
-                <option value="stylus">Stylus</option>
-                <option value="postcss">PostCSS</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div>
-              <fieldset>
-                <legend>Are you familiar with CSS Grid?</legend>
-                <input type="radio" name="grid" id="yes" value="yes" />
-                <label for="yes">Yes</label>
-                <input type="radio" name="grid" id="no" value="no" />
-                <label for="no">No</label>
-              </fieldset>
-            </div>
-            <div class="full-width">
-              <label for="message">Message</label>
-              <textarea id="message"></textarea>
-            </div>
-            <div class="full-width">
-              <input type="checkbox" id="newsletter" />
-              <label for="newsletter">Receive our newsletter?</label>
-            </div>
-            <div class="full-width">
-              <button type="submit">Send Response</button>
-              <button type="reset">Clear Form</button>
-            </div>
-        </form> -->
-
         <form id="work-schedule-form" method="POST" action="/views/create.html">
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required>
+            <label for="workSchedule">Work Schedule:</label>
+            <select id="workSchedule" name="workSchedule" required>
+                <option value="weekday8-4">Weekday 8am-4pm</option>
+                <option value="weekday9-5"> Weekday 9am-5pm</option>
+                <option value="weekday12-9"> Weekday 12pm-9pm</option>
+                <option value="weekend10-7"> Weekend 10am-7pm</option>
+                <option value="weekend7-3"> Weekend 7am-3pm</option>
+                <option value="weekend12-9"> Weekend 12pm-9pm</option> 
+            </select>
             
-            <label for="startTime">Start Time:</label>
+ <!--       <label for="startTime">Start Time:</label>
             <input type="time" id="starTTime" name="startTime" required>
             
             <label for="endTime">End Time:</label>
@@ -97,10 +62,10 @@
             
             <label for="DayOfWeek">Day of Week:</label>
             <input type="text" id="DayOfWeek" name="DayOfWeek" required>
-            
+-->            
             <button type="submit">Add Work Schedule</button>
         </form>
-
+        <!--
         <form id="goal-form" method="POST" action="/views/create.html">
             <label for="goalName">Goal Name:</label>
             <input type="text" id="goalName" name="goalName" required>
@@ -142,19 +107,11 @@
             <input type="date" id="deadline" name="deadline" required>
             
             <button type="submit">Add Task</button>
-        </form>
+        </form> -->
 
-        <div id="calendar-box">
-            <div class="day" id="monday">Monday</div>
-            <div class="day" id="tuesday">Tuesday</div>
-            <div class="day" id="wednesday">Wednesday</div>
-            <div class="day" id="thursday">Thursday</div>
-            <div class="day" id="friday">Friday</div>
-            <div class="day" id="saturday">Saturday</div>
-            <div class="day" id="sunday">Sunday</div>
-        </div>
+        <a href="./calendar.html"><button class="button-56" role="button"> Create Calendar! </button></a>
 
-        <script>
+<!--        <script>
             document.addEventListener('DOMContentLoaded', function() {
             const userID = 1; // Replace with dynamic user ID based on login/session
             fetch(`fetch_schedule.php?userID=${userID}`)
@@ -209,6 +166,7 @@
                 .catch(error => console.error('Error fetching data:', error));
         });
         </script>
+-->
 
         <!-- <div id="goals-box">
             <h3>Goals</h3>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> PlanMyWeek</title>
+        <link rel="icon" type="image/png" href="./images/ant-vector.png">
+        <link rel="stylesheet" href="./stylesheet.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="jquery-3.7.1.min.js"></script>
+        <script src="../app/app.js"></script>
+        <script src="../app/home.js"></script>
+        <script src="../app/services/db.js"></script>
+    </head>
+
+    <body>
+        <header class="header">
+            <h1> PlanMyWeek </h1>
+            <div class="logo">
+                <img src="./images/ant-vector.png" class="logo-wrapped">
+            </div>
+            <nav class="menu-items">
+                <ul class="menu-list">
+                    <li><a href="index.html"> Home </a></li>
+                    <li><a href="about-us.html"> About Us </a></li>
+                    <li><a href="signin.html"> Sign in/Sign up</a></li>
+                </ul>
+            </nav>    
+        </header>
+
+        <p></p>
+
+        <div id="calendar-box">
+            <div id="DayOfWeek">
+                <div id="blank"></div>
+                <div id="Monday">Monday</div>
+                <div id="Tuesday">Tuesday</div>
+                <div id="Wednesday">Wednesday</div>
+                <div id="Thursday">Thursday</div>
+                <div id="Friday">Friday</div>
+                <div id="Saturday">Saturday</div>
+                <div id="Sunday">Sunday</div>
+            </div>
+            <div class="boxes">
+                <div class="am6">6am</div><div class="am6"></div><div class="am6"></div><div class="am6"></div><div class="am6"></div><div class="am6"></div><div class="am6W"></div><div class="am6W"></div>
+                <br><div class="am7">7am</div><div class="am7"></div><div class="am7"></div><div class="am7"></div><div class="am7"></div><div class="am7"></div><div class="am7W"></div><div class="am7w"></div>
+                <br><div class="am8">8am</div><div class="am8"></div><div class="am8"></div><div class="am8"></div><div class="am8"></div><div class="am8"></div><div class="am8W"></div><div class="am8W"></div>
+                <br><div class="am9">9am</div><div class="am9"></div><div class="am9"></div><div class="am9"></div><div class="am9"></div><div class="am9"></div><div class="am9W"></div><div class="am9W"></div>
+                <br><div class="am10">10am</div><div class="am10"></div><div class="10am"></div><div class="10am"></div><div class="10am"></div><div class="10am"></div><div class="10amW"></div><div class="10amW"></div>
+                <br><div class="am11">11am</div><div class="am11"></div><div class="11am"></div><div class="11am"></div><div class="11am"></div><div class="11am"></div><div class="11amW"></div><div class="11amW"></div>
+                <br><div class="pm12">12pm</div><div class="pm12"></div><div class="pm12"></div><div class="pm12"></div><div class="pm12"></div><div class="pm12"></div><div class="pm12"></div><div class="pm12W"></div><div class="pm12W"></div>
+                <br><div class="pm1">1pm</div><div class="pm1"></div><div class="pm1"></div><div class="pm1"></div><div class="pm1"></div><div class="pm1"></div><div class="pm1"></div><div class="pm1W"></div><div class="pm1W"></div>
+                <br><div class="pm2">2pm</div><div class="pm2"></div><div class="pm2"></div><div class="pm2"></div><div class="pm2"></div><div class="pm2"></div><div class="pm2"></div><div class="pm2W"></div><div class="pm2W"></div>
+                <br><div class="pm3">3pm</div><div class="pm3"></div><div class="pm3"></div><div class="pm3"></div><div class="pm3"></div><div class="pm3"></div><div class="pm3"></div><div class="pm3W"></div><div class="pm3W"></div>
+                <br><div class="pm4">4pm</div><div class="pm4"></div><div class="pm4"></div><div class="pm4"></div><div class="pm4"></div><div class="pm4"></div><div class="pm4"></div><div class="pm4W"></div><div class="pm4W"></div>
+                <br><div class="pm5">5pm</div><div class="pm5"></div><div class="pm5"></div><div class="pm5"></div><div class="pm5"></div><div class="pm5"></div><div class="pm5"></div><div class="pm5W"></div><div class="pm5W"></div>
+                <br><div class="pm6">6pm</div><div class="pm6"></div><div class="pm6"></div><div class="pm6"></div><div class="pm6"></div><div class="pm6"></div><div class="pm6"></div><div class="pm6W"></div><div class="pm6W"></div>
+                <br><div class="pm7">7pm</div><div class="pm7"></div><div class="pm7"></div><div class="pm7"></div><div class="pm7"></div><div class="pm7"></div><div class="pm7"></div><div class="pm7W"></div><div class="pm7W"></div>
+                <br><div class="pm8">8pm</div><div class="pm8"></div><div class="pm8"></div><div class="pm8"></div><div class="pm8"></div><div class="pm8"></div><div class="pm8"></div><div class="pm8W"></div><div class="pm8W"></div>
+                <br><div class="pm9">9pm</div><div class="pm9"></div><div class="pm9"></div><div class="pm9"></div><div class="pm9"></div><div class="pm9"></div><div class="pm9"></div><div class="pm9W"></div><div class="pm9W"></div>
+                <br><div class="pm10">10pm</div><div class="pm10"></div><div class="pm10"></div><div class="pm10"></div><div class="pm10"></div><div class="pm10"></div><div class="pm10"></div><div class="pm10W"></div><div class="pm10W"></div>
+                <br><div class="pm11">11pm</div><div class="pm11"></div><div class="pm11"></div><div class="pm11"></div><div class="pm11"></div><div class="pm11"></div><div class="pm11"></div><div class="pm11W"></div><div class="pm11W"></div>
+            </div>
+            <table>
+                <tr>
+                    <th>-</th>
+                    <th>Monday</th>
+                </tr>
+            </table>
+<!--            <div id="weekday8-4">
+                <div class="8am"></div>
+                <div class="9am"></div>
+                <div class="10am"></div>
+                <div class="11am"></div>
+                <div class="12pm"></div>
+                <div class="1pm"></div>
+                <div class="2pm"></div>
+                <div class="3pm"></div>
+                <div class="4pm"></div>
+            </div>
+            <div id="weekday9-5">
+                <div class="9am"></div>
+                <div class="10am"></div>
+                <div class="11am"></div>
+                <div class="12pm"></div>
+                <div class="1pm"></div>
+                <div class="2pm"></div>
+                <div class="3pm"></div>
+                <div class="4pm"></div>
+                <div class="5pm"></div>
+            </div>
+            <div id="weekday12-9">
+                <div class="12pm"></div>
+                <div class="1pm"></div>
+                <div class="2pm"></div>
+                <div class="3pm"></div>
+                <div class="4pm"></div>
+                <div class="5pm"></div>
+                <div class="6pm"></div>
+                <div class="7pm"></div>
+                <div class="8pm"></div>
+                <div class="9pm"></div>
+            </div>
+            <div id="weekend7-3">
+                <div class="7amW"></div>
+                <div class="8amW"></div>
+                <div class="9amW"></div>
+                <div class="10amW"></div>
+                <div class="11amW"></div>
+                <div class="12pmW"></div>
+                <div class="1pmW"></div>
+                <div class="2pmW"></div>
+                <div class="3pmW"></div>
+            </div>
+            <div id="weekend10-7">
+                <div class="10amW"></div>
+                <div class="11amW"></div>
+                <div class="12pmW"></div>
+                <div class="1pmW"></div>
+                <div class="2pmW"></div>
+                <div class="3pmW"></div>
+                <div class="4pmW"></div>
+                <div class="5pmW"></div>
+                <div class="6pmW"></div>
+                <div class="7pmW"></div>
+            </div>
+            <div id="weekend12-9">
+                <div class="12pmW"></div>
+                <div class="1pmW"></div>
+                <div class="2pmW"></div>
+                <div class="3pmW"></div>
+                <div class="4pmW"></div>
+                <div class="5pmW"></div>
+                <div class="6pmW"></div>
+                <div class="7pmW"></div>
+                <div class="8pmW"></div>
+                <div class="9pmW"></div>
+            </div> -->
+        </div>
+
+        <footer>
+            <div class="footer-image">
+                <img src="./images/ant-trail-headerfooter.png" alt="ant" class="ant-wrapped"><img src="./images/ant-trail-headerfooter.png" alt="ant" class="ant-wrapped"><img src="./images/ant-trail-headerfooter.png" alt="ant" class="ant-wrapped"><img src="./images/ant-trail-headerfooter.png" alt="ant" class="ant-wrapped"><img src="./images/ant-trail-headerfooter.png" alt="ant" class="ant-wrapped">
+            </div>
+            <h3>Quick Links</h3>
+                <div class="footer-links">
+                    <a href="./index.html" style="color: #00215E ;">Home | </a><a href="./signin.html" style="color: #00215E;">Sign In | </a><a href="./about-us.html" style="color: #00215E;">About Us | </a><a href="./contact-us.html" style="color: #00215E;">Contact Us</a>
+                </div>
+            <p></p>
+            <div class="footer-bottom">
+                &copy; 2024 PlanMyWeek | Designed by Samira Hamadneh
+            </div>
+        </footer>
+
+    </body>
+</html>
