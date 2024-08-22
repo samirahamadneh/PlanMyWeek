@@ -338,15 +338,30 @@ form {
 
 #calendar-box {
   border: 3px solid black;
-  margin: 100px 100px;
-  padding: 0;
+  margin: auto;
+  margin-top: 90px;
+  width: 90%;
 }
 
-#DayOfWeek {
-  border: .5px solid black;
-  padding: 0;
+.boxes, th {
+  text-align: center;
+  height: 40px;
 }
 
+.space {
+  border-left: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+/* 
 #blank, #Monday, #Tuesday, #Wednesday, #Thursday, #Friday, #Saturday, #Sunday {
   display: inline-block;
   font-family: "Montserrat", sans-serif;
@@ -358,13 +373,9 @@ form {
   vertical-align: middle;
 }
 
-.boxes {
-  border: .5px solid black;
-  padding: 0;
-  text-align: center;
-}
 
-.am6, .am6W, .am7, .am7W, .am8, .am8W {
+
+ .am6, .am6W, .am7, .am7W, .am8, .am8W {
   display: inline-block;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
@@ -373,7 +384,7 @@ form {
   height: 30px;
   border-right: 1px solid black;
   vertical-align: middle;
-}
+} */
 
 .day {
   border: 1px solid #ccc;
