@@ -44,8 +44,8 @@
         <p></p>
 
         <form id="work-schedule-form" method="POST" action="/views/create.html">
-            <label for="workSchedule">Work Schedule:</label>
-            <select id="workSchedule" name="workSchedule" required>
+            <label for="DayOfWeek">Work Schedule:</label>
+            <select id="DayOfWeek" name="DayOfWeek" required>
                 <option value="weekday8-4">Weekday 8am-4pm</option>
                 <option value="weekday9-5"> Weekday 9am-5pm</option>
                 <option value="weekday12-9"> Weekday 12pm-9pm</option>
@@ -65,7 +65,6 @@
 -->            
             <button type="submit">Add Work Schedule</button>
         </form>
-        <!--
         <form id="goal-form" method="POST" action="/views/create.html">
             <label for="goalName">Goal Name:</label>
             <input type="text" id="goalName" name="goalName" required>
@@ -107,76 +106,9 @@
             <input type="date" id="deadline" name="deadline" required>
             
             <button type="submit">Add Task</button>
-        </form> -->
+        </form>
 
         <a href="./calendar.html"><button class="button-56" role="button"> Create Calendar! </button></a>
-
-<!--        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-            const userID = 1; // Replace with dynamic user ID based on login/session
-            fetch(`fetch_schedule.php?userID=${userID}`)
-                .then(response => response.json())
-                .then(data => {
-                    const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-
-                    days.forEach(day => {
-                        const dayElement = document.getElementById(day);
-                        dayElement.innerHTML = `<h4>${day.charAt(0).toUpperCase() + day.slice(1)}</h4>`;
-
-                        // Display schedules
-                        const daySchedules = data.schedules.filter(schedule => {
-                            const scheduleDate = new Date(schedule.date);
-                            return scheduleDate.toLocaleDateString('en-UK', { weekday: 'long' }).toLowerCase() === day;
-                        });
-                        daySchedules.forEach(schedule => {
-                            const scheduleElement = document.createElement('div');
-                            scheduleElement.className = 'ScheduleName';
-                            scheduleElement.innerText = `${schedule.startTime} - ${schedule.endTime}: ${schedule.DayOfWeek}`;
-                            dayElement.appendChild(scheduleElement);
-                        });
-
-                        // Display goals (assuming they are displayed daily if they are active during the week)
-                        const dayGoals = data.goals.filter(goals => {
-                            const startDate = new Date(goals.startDate);
-                            const endDate = new Date(goals.endDate);
-                            const currentDay = new Date(day);
-
-                            return currentDay >= startDate && currentDay <= endDate;
-                        });
-                        dayGoals.forEach(goals => {
-                            const goalElement = document.createElement('div');
-                            goalElement.className = 'goal-item';
-                            goalElement.innerText = `Goal: ${goals.goalName} (${goals.description})`;
-                            dayElement.appendChild(goalElement);
-                        });
-
-                        // Display tasks
-                        const dayTasks = data.tasks.filter(task => {
-                            const taskDate = new Date(task.deadline);
-                            return taskDate.toLocaleDateString('en-UK', { weekday: 'long' }).toLowerCase() === day;
-                        });
-                        dayTasks.forEach(task => {
-                            const taskElement = document.createElement('div');
-                            taskElement.className = 'taskName';
-                            taskElement.innerText = `Task: ${task.taskName} (Description: ${task.description})`;
-                            dayElement.appendChild(taskElement);
-                        });
-                    });
-                })
-                .catch(error => console.error('Error fetching data:', error));
-        });
-        </script>
--->
-
-        <!-- <div id="goals-box">
-            <h3>Goals</h3>
-            <ul id="goals-list"></ul>
-        </div>
-        
-        <div id="tasks-box">
-            <h3>Tasks</h3>
-            <ul id="tasks-list"></ul>
-        </div> -->
 
         <footer>
             <div class="footer-image">

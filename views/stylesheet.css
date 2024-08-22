@@ -343,17 +343,13 @@ form {
   width: 90%;
 }
 
+table {
+  border-collapse: collapse;
+}
+
 .boxes, th {
   text-align: center;
   height: 40px;
-}
-
-.space {
-  border-left: 1px solid black;
-}
-
-table {
-  border-collapse: collapse;
 }
 
 th {
@@ -361,59 +357,10 @@ th {
   border-right: 1px solid black;
 }
 
-/* 
-#blank, #Monday, #Tuesday, #Wednesday, #Thursday, #Friday, #Saturday, #Sunday {
-  display: inline-block;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  color: #00215E;
-  width: 7em;
-  height: 50px;
-  border-right: 1px solid black;
-  vertical-align: middle;
+.space {
+  border-left: 1px solid black;
 }
 
-
-
- .am6, .am6W, .am7, .am7W, .am8, .am8W {
-  display: inline-block;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  color: #00215E;
-  width: 7em;
-  height: 30px;
-  border-right: 1px solid black;
-  vertical-align: middle;
-} */
-
-.day {
-  border: 1px solid #ccc;
-  padding: 10px;
-  background-color: #f9f9f9;
-}
-
-.schedule-item {
-  background-color: #d4edda;
-  padding: 5px;
-  margin-top: 5px;
-  border-radius: 5px;
-}
-
-#goals-box, #tasks-box {
-  margin-top: 20px;
-  background-color: #f1f1f1;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-#goals-list, #tasks-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.goal-item, .task-item {
-  background-color: #d4edda;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+#nineam, #tenam, #elevenam, #twelvepm, #onepm, #twopm, #threepm, #fourpm, #fivepm {
+  background-color: #C1D8C3;
 }
