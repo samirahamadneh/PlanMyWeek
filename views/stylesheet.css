@@ -357,10 +357,43 @@ th {
   border-right: 1px solid black;
 }
 
-.space {
+td {
   border-left: 1px solid black;
+  position: relative;
 }
 
 #nineam, #tenam, #elevenam, #twelvepm, #onepm, #twopm, #threepm, #fourpm, #fivepm {
   background-color: #C1D8C3;
+}
+
+#sevenam, #sevenpm, #sevenpmW {
+  background-color: #c8dcff;
+}
+
+#tenpmWT {
+  background-color: #FFAD60;
+}
+
+td::after {
+  content: attr(data-hover); /* Use the data-hover attribute as the content */
+  visibility: hidden; /* Hidden by default */
+  opacity: 0; /* Invisible by default */
+  background-color: #333; /* Background color for the hover text */
+  color: #fff; /* Text color */
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  bottom: 100%; /* Position above the td */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap; /* Prevent text from wrapping */
+  z-index: 1;
+  transition: opacity 0.3s; /* Smooth transition */
+}
+
+/* Show the text when hovering */
+td:hover::after {
+  visibility: visible;
+  opacity: 1;
 }
