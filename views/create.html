@@ -11,8 +11,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <script src="jquery-3.7.1.min.js"></script>
         <script src="../app/app.js"></script>
-        <script src="../app/home.js"></script>
-        <script src="../app/services/db.js"></script>
 
     </head>
 
@@ -43,26 +41,22 @@
 
         <p></p>
 
-        <form id="work-schedule-form" method="POST" action="/views/create.html">
+        <form id="work-schedule-form" method="POST" action="">
             <label for="DayOfWeek">Work Schedule:</label>
             <select id="DayOfWeek" name="DayOfWeek" required>
                 <option value="weekday8-4">Weekday 8am-4pm</option>
-                <option value="weekday9-5"> Weekday 9am-5pm</option>
+                <option value="weekday9-5" selected> Weekday 9am-5pm</option>
                 <option value="weekday12-9"> Weekday 12pm-9pm</option>
                 <option value="weekend10-7"> Weekend 10am-7pm</option>
                 <option value="weekend7-3"> Weekend 7am-3pm</option>
                 <option value="weekend12-9"> Weekend 12pm-9pm</option> 
             </select>
-               
-            <button type="submit">Add Work Schedule</button>
         </form>
-        <form id="goal-form" method="POST" action="/views/create.html">
+
+        <form id="goal-form" method="POST" action="">
             <label for="goalName">Goal Name:</label>
             <input type="text" id="goalName" name="goalName" required>
-            
-            <label for="description">Description:</label>
-            <input type="text" id="description" name="description" required>
-            
+            <p></p>
             <label for="frequency">Frequency:</label>
             <select id="frequency" name="frequency" required>
                 <option value="daily">Daily</option>
@@ -73,27 +67,70 @@
                 <option value="six"> Six times a week</option>
                 <option value="weekly">Weekly</option>
             </select>
-            
-            <label for="duration">Duration (HH:MM:SS):</label>
-            <input type="time" id="duration" name="duration" required>
-            
-            <button type="submit">Add Goal</button>
+            <p></p>
+            <label for="settime">Consistent Time:</label>
+            <select id="settime" name="settime" required>
+                <option value="6a">6am</option>
+                <option value="7a"> 7am</option>
+                <option value="8a"> 8am</option>
+                <option value="9a"> 9am</option>
+                <option value="10a"> 10am</option>
+                <option value="11a"> 11am</option>
+                <option value="12p">12pm</option>
+                <option value="1p">1pm</option>
+                <option value="2p"> 2pm</option>
+                <option value="3p"> 3pm</option>
+                <option value="4p"> 4pm</option>
+                <option value="5p"> 5pm</option>
+                <option value="6p"> 6pm</option>
+                <option value="7p">7pm</option>
+                <option value="8p">8pm</option>
+                <option value="9p"> 9pm</option>
+                <option value="10p"> 10pm</option>
+                <option value="11p"> 11pm</option>
+            </select>
+            <br><button>Add another goal</button>
         </form>
 
-        <form id="task-form" method="POST" action="/views/create.html">
+        <form id="task-form" method="POST" action="">
             <label for="taskName">Task Name:</label>
             <input type="text" id="taskName" name="taskName" required>
-            
-            <label for="description">Description:</label>
-            <input type="text" id="description" name="description" required>
-            
+            <p></p>
             <label for="deadline">Deadline:</label>
-            <input type="date" id="deadline" name="deadline" required>
-            
-            <button type="submit">Add Task</button>
+            <select id="deadline" name="deadline" required>
+                <option value="mon">Monday</option>
+                <option value="tues"> Tuesday</option>
+                <option value="wed"> Wednesday</option>
+                <option value="thurs"> Thursday</option>
+                <option value="fri"> Friday</option>
+                <option value="sat"> Saturday</option>
+                <option value="sun">Sunday</option>
+            </select>
+            <p></p>
+            <label for="time">Time:</label>
+            <select id="time" name="time" required>
+                <option value="6a">6am</option>
+                <option value="7a"> 7am</option>
+                <option value="8a"> 8am</option>
+                <option value="9a"> 9am</option>
+                <option value="10a"> 10am</option>
+                <option value="11a"> 11am</option>
+                <option value="12p">12pm</option>
+                <option value="1p">1pm</option>
+                <option value="2p"> 2pm</option>
+                <option value="3p"> 3pm</option>
+                <option value="4p"> 4pm</option>
+                <option value="5p"> 5pm</option>
+                <option value="6p"> 6pm</option>
+                <option value="7p">7pm</option>
+                <option value="8p">8pm</option>
+                <option value="9p"> 9pm</option>
+                <option value="10p"> 10pm</option>
+                <option value="11p"> 11pm</option>
+            </select>    
         </form>
 
-        <a href="./calendar.html"><button class="button-56" role="button"> Create Calendar! </button></a>
+        <a href="./loading.html"><button class="button-56" role="button"> Create Calendar! </button></a>
 
         <footer>
             <div class="footer-image">

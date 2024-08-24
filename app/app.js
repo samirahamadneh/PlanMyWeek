@@ -1,77 +1,4 @@
-// Import express.js
-const express = require("express");
-const bodyParser = require('body-parser');
-const mysql = require('mysql');
-
-/* var appp = (function () {
-  var WebsiteName = "PlanMyWeek";
-  return {
-    getWebsiteName: function() {
-      return WebsiteName;
-    }
-  }
-}) (); */
-
-// Create express app
-var app = express();
-
-// Add static files location
-app.use(express.static("static"));
-const bodyParser = require('body-parser');
-
-// Set the sessions
-var session = require('express-session');
-app.use(session({
-  secret: 'secretplanmyweek',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: false }
-}));
-
-
-app.set('view engine', 'html');
-app.set('views', './app/views');
-
-const db = require('./services/db');
-
-// Models- user
-const { login } = require("./login");
-
-// Parse request body
-app.use(bodyParser.urlencoded({ extended: true }));
-
-// Create a route for root 
-// app.get("/", function(req, res) {    sql = 'select post_id, title, LEFT(content, 60) AS content from blog_posts ORDER BY post_id DESC LIMIT 3';
-//    db.query(sql).then(results => {
-//        res.render("index", {results:results})
-//    })
-//    });
-
-// Route for about page 
-app.get("/views/about-us", (req, res) => {
-    res.render('about-us');
-});
-
-// Route for contact page 
-app.get("/contact-us", (req, res) => {
-    res.render('contact-us');
-});
-
-app.get('/api/workSchedule', (req, res) => {
-  const today = new Date();
-  const nextWeek = new Date(today);
-  nextWeek.setDate(today.getDate() + 7);
-
-  const query = `SELECT * FROM workSchedule WHERE date BETWEEN ? AND ? ORDER BY date, startTime`;
-  connection.query(query, [today, nextWeek], (err, results) => {
-      if (err) throw err;
-      res.json(results);
-  });
-});
-
-const calendarBox = document.getElementById('calendar-box');
-
-/* fetch('/PlanMyWeek/weekSchedule')
+fetch('/PlanMyWeek/weekSchedule')
     .then(response => response.json())
     .then(data => {
         const today = new Date();
@@ -178,7 +105,7 @@ app.use(bodyParser.json());
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'password',
+    password: '',
     database: 'PlanMyWeek'
 });
 
@@ -223,4 +150,4 @@ app.post('/add-task', (req, res) => {
 // Start the server
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
-}); */
+});
