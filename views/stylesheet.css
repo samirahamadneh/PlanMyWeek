@@ -402,10 +402,10 @@ td::after {
   visibility: hidden;
   opacity: 0;
   background-color: #fee6e3;
-  color: #b8d1ff;
+  color: #19479e;
   text-align: center;
   border-radius: 5px;
-  padding: 5px;
+  padding: 7px;
   position: absolute;
   bottom: 100%;
   left: 50%;
